@@ -14,7 +14,7 @@ datuak = []
 def cpu_ram():
     # KODEA: psutil liburutegia erabiliz, %CPU eta %RAM atera
  while True:
-    cpu = psutil.cpu_percent(interval=None)
+    cpu = psutil.cpu_percent(interval=1)
     ram = psutil.virtual_memory().percent
     print("CPU: %" + str(cpu) + "\tRAM: %" + str(ram))
 
@@ -85,7 +85,7 @@ def kanala_sortu():
     goiburuak = {'Host': 'api.thingspeak.com',
                  'Content-Type': 'application/x-www-form-urlencoded'}
     edukia = {'api_key': 'AUVWRRWOG71KF40S',
-              'name': 'proba1.0',
+              'name': 'Nire Kanala',
               'field1': "%CPU",
               'field2': "%RAM"}
 
